@@ -90,3 +90,46 @@ INSERT INTO `emprestimo_devolucao`(`codlivro`, `codfuncionario`, `data_emprestim
 (2,1,'1999-10-04','2001-02-08',2),
 (7,1,'2014-08-09','2014-11-29',6),
 (9,2,'2020-02-01','2020-03-04',7);
+
+UPDATE `aluno` SET `email`= 'laura@gmail.com' WHERE ra = 1;
+UPDATE `aluno` SET `email`= 'claire@gmail.com' WHERE ra = 2;
+UPDATE `aluno` SET `email`= 'fernandinha@gmail.com' WHERE ra = 3;
+UPDATE `aluno` SET `email`= 'clarice@gmail.com' WHERE ra = 4;
+UPDATE `aluno` SET `email`= 'kaua@gmail.com' WHERE ra = 5;
+UPDATE `aluno` SET `email`= 'nair@gmail.com' WHERE ra = 6;
+UPDATE `aluno` SET `email`= 'athirson@gmail.com' WHERE ra = 7;
+UPDATE `aluno` SET `email`= 'elis@gmail.com' WHERE ra = 8;
+UPDATE `aluno` SET `email`= 'ale@gmail.com' WHERE ra = 9;
+UPDATE `aluno` SET `email`= 'juju@gmail.com' WHERE ra = 10;
+
+ALTER TABLE bibliotecario DROP COLUMN logradouro;
+
+ALTER TABLE livros ADD COLUMN paginas;
+
+UPDATE `livros` SET `paginas`= '100' WHERE codlivro = 1;
+UPDATE `livros` SET `paginas`= '320' WHERE codlivro = 2;
+UPDATE `livros` SET `paginas`= '150' WHERE codlivro = 3;
+UPDATE `livros` SET `paginas`= '200' WHERE codlivro = 4;
+UPDATE `livros` SET `paginas`= '100' WHERE codlivro = 5;
+UPDATE `livros` SET `paginas`= '60' WHERE codlivro = 6;
+UPDATE `livros` SET `paginas`= '300' WHERE codlivro = 7;
+UPDATE `livros` SET `paginas`= '20' WHERE codlivro = 8;
+UPDATE `livros` SET `paginas`= '120' WHERE codlivro = 9;
+UPDATE `livros` SET `paginas`= '402' WHERE codlivro = 10;
+
+ALTER TABLE livros ADD COLUMN exemplares int;
+
+UPDATE `livros` SET `exemplares`= '20' WHERE codlivro = 1;
+UPDATE `livros` SET `exemplares`= '50' WHERE codlivro = 2;
+UPDATE `livros` SET `exemplares`= '6' WHERE codlivro = 3;
+UPDATE `livros` SET `exemplares`= '4' WHERE codlivro = 4;
+UPDATE `livros` SET `exemplares`= '10' WHERE codlivro = 5;
+UPDATE `livros` SET `exemplares`= '5' WHERE codlivro = 6;
+UPDATE `livros` SET `exemplares`= '4' WHERE codlivro = 7;
+UPDATE `livros` SET `exemplares`= '40' WHERE codlivro = 8;
+UPDATE `livros` SET `exemplares`= '1' WHERE codlivro = 9;
+UPDATE `livros` SET `exemplares`= '5' WHERE codlivro = 10;
+
+
+
+
