@@ -104,7 +104,7 @@ UPDATE `aluno` SET `email`= 'juju@gmail.com' WHERE ra = 10;
 
 ALTER TABLE bibliotecario DROP COLUMN logradouro;
 
-ALTER TABLE livros ADD COLUMN paginas;
+ALTER TABLE livros ADD COLUMN paginas int;
 
 UPDATE `livros` SET `paginas`= '100' WHERE codlivro = 1;
 UPDATE `livros` SET `paginas`= '320' WHERE codlivro = 2;
