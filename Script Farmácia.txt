@@ -1,0 +1,41 @@
+CREATE DATABASE veterinaria;
+USE veterinaria;
+
+CREATE TABLE produto_remedio (
+codProduto int PRIMARY KEY auto_increment,
+nome varchar(150),
+preco decimal (7,2),
+qtde int,
+fabricante varchar(100),
+generico bit
+);
+
+CREATE TABLE caixa_atendente (
+codAtendente int PRIMARY KEY auto_increment,
+nome varchar(150),
+cpf varchar(15) unique,
+celular varchar(10),
+tel varchar(15),
+email varchar(20) unique,
+rg varchar(15) unique,
+salario decimal(7,2)
+);
+
+CREATE TABLE compra_venda (
+codCompra_Venda int PRIMARY KEY auto_increment,
+hora varchar(5),
+total varchar(40),
+cpf varchar(15),
+data date,
+codAtendente int,
+FOREIGN KEY(codAtendente) REFERENCES caixa_atendente (codAtendente)
+);
+
+CREATE TABLE itens_compra (
+codCompra_Venda int,
+codProduto int,
+qtde varchar(20),
+totalUnit varchar(20),
+FOREIGN KEY(codCompra_Venda) REFERENCES compra_venda (codCompra_Venda),
+FOREIGN KEY(codProduto) REFERENCES produto_remedio (codProduto)
+);
