@@ -39,3 +39,39 @@ totalUnit varchar(20),
 FOREIGN KEY(codCompra_Venda) REFERENCES compra_venda (codCompra_Venda),
 FOREIGN KEY(codProduto) REFERENCES produto_remedio (codProduto)
 );
+
+INSERT INTO `produto_remedio`(`nome`, `preco`, `qtde`, `fabricante`, `generico`) VALUES 
+('Ibuprofeno','20,00',20,'Prati',1),
+('Novalgina','30,10',12,'Sanovi Avents',0),
+('Melagrião','50,90',40,'Catarinense',0),
+('AltaD','60,42',14,'Eurofarma',0),
+('Sorine','13,00',25,'Ache',1),
+('Propomax','75,00',23,'Apis Flora',1),
+('Bronquivita','40,00',6,'Vitalab',1),
+('Stodal','24,00',43,'Boiron',1),
+('Guacovita','25,00',15,'Vitalab',0),
+('Nimesulida','82,00',22,'Cimed',1),
+('Avamys','15,00',10,'Gsk',0);
+
+INSERT INTO caixa_atendente (`nome`,`cpf`,`celular`,`tel`,`email`,`rg`,`salario`) VALUES 
+('Fernanda Souza', '12345678910', '96452-6541', '4562-7896', 'fernanda@gmail.com','556590705','900,00'),
+('Julia Jout', '45698523641', '97895-5632', '4838-6265', 'julia@gmail.com','455621356','900,00'),
+('Amelia Rodrigues', '45626584793', '96523-8745', '4785-6523', 'amelia@gmail.com','4523565889','900,00');
+
+INSERT INTO `compra_venda`(`hora`, `total`, `cpf`, `data`, `codAtendente`) VALUES 
+('12:00', '150,00', '12354679810','2020-09-20',1),
+('9:30', '14,00', '56423185697','2020-01-05',2),
+('15:10', '90,00', '74586923564','2019-07-19',3);
+
+INSERT INTO `itens_compra`(`codCompra_Venda`, `codProduto`, `qtde`, `totalUnit`) VALUES 
+(1,2,'2','7'),
+(1,4,'4','7'),
+(1,5,'1','7'),
+
+(2,9,'1','3'),
+(2,9,'1','3'),
+(2,9,'1','3'),
+
+(3,6,'4','10'),
+(3,7,'3','10'),
+(3,2,'3','10');
